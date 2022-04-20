@@ -19,7 +19,7 @@ function calcularCuotas() {
     }
 }
 
-//Primera Entrega del Proyecto Final 
+// - PRIMERA ENTREGA DEL PROYECTO FINAL -
 
 class Producto {
     constructor(nombre, stock, precio) {
@@ -86,4 +86,26 @@ let productosCantidad = () => {
     }
 }
 
-productosCantidad()
+
+//DESAFIO COMPLEMENTARIO - Interactuar con el HTML
+
+class Formulario {
+    constructor(nombre, telefono, mail, descripcion){
+    this.nombre = nombre;
+    this.telefono = telefono;
+    this.mail = mail;
+    this.descripcion = descripcion;
+    }
+}
+
+let listaClientes = []
+
+const guardarCliente = () => {
+    let nombre = document.getElementById("nombre").value;
+    let telefono = document.getElementById("telefono").value;
+    let mail = document.getElementById("mail").value;
+    let descripcion = document.getElementById("descripcion").value;
+
+    let nuevoCliente = new Formulario(nombre, telefono, mail, descripcion)
+    listaClientes.push(nuevoCliente);
+}

@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+@import './header-footer/header';
+@import './secciones/index';
+@import './secciones/clientes';
+@import './secciones/sobremi';
+@import './secciones/contacto';
+@import './header-footer/footer';

@@ -1,0 +1,24 @@
+main {
+    background-color: #f8efd8;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    grid-template-areas: 
+    "cubreBotas pollerinS"
+    "pollerinM pollerinL";
+}
+
+.card h3{
+    font-family: 'Staatliches';
+    padding: 20px;
+    button{
+    background-color: #301f0a;
+    color: #f8efd8;
+    font-family: 'Staatliches';
+}
+}

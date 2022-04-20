@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    background-color: #301f0a;
+    height: 18vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        h1 {
+            font-size: 70px;
+            font-family: 'Staatliches', cursive;
+            letter-spacing: 5px;
+            text-align: center;
+            color: #c39947;
+        }
+    }   
+    ul {
+        display: flex;
+        margin: 10px 200px;
+        li {
+            list-style: none;
+            margin: 0 20px;
+            a {
+              color: beige;
+              font-size: 20px;
+              transition: 0.4s all ease 0s;
+              text-decoration: none;
+              letter-spacing: 0.4px;
+              &:hover {
+                text-decoration: none;
+                transition: ease-in;
+                color: beige;
+                font-size: 20px;
+              }
+            }
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+}
