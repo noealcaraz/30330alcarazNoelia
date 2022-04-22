@@ -33,7 +33,7 @@ class Producto {
         this.vendido = true;
         if ((cantidad <= this.stock) && (this.stock >= 1)) {
             this.stock -= cantidad;
-            alert('Producto añadido al carrito con éxito!');
+            alert(`Producto ${this.nombre} añadido al carrito con éxito!`);
         } else if (cantidad > this.stock) {
             alert(`Lo sentimos. En este momento contamos con ${this.stock} productos`)
         } else if (this.stock <= 0) {
@@ -62,7 +62,7 @@ let producto
 
 //Funciones
 
-let bienvenida = () => {
+const bienvenida = () => {
     seleccion = prompt('Por favor ingrese el producto que desea: \n 1-Cubre Botas \n 2-Pollerin S \n 3-Pollerin M \n 4-Pollerin L \n Para salir oprima "Cancel"');
     if (seleccion >= 5 && seleccion <= 0) {
         alert('Por favor elegí una de las opciones brindadas')
@@ -74,12 +74,11 @@ let bienvenida = () => {
 
 }
 
-let productosCantidad = () => {
-    producto = bienvenida()
+const productosCantidad = () => {
     cantidad = prompt(`El valor unitario de ${producto} es de $${listaProductos[seleccion].precio}. Ingresa la cantidad que deseas añadir al carrito `)
     productoSubT = listaProductos[seleccion].precio * cantidad;
-    carrito.push(producto, cantidad, productoSubT);
-    if (confirm`Producto añadido con éxito! Deseas agregar más?` === true) {
+    console.log(carrito.push(producto, cantidad, productoSubT));
+    if (confirm`Producto ${this.nombre} añadido con éxito! Deseas agregar más?` === true) {
         productosCantidad()
     } else {
         alert(`Chequea tus productos añadidos en la consola.`)
@@ -87,7 +86,7 @@ let productosCantidad = () => {
 }
 
 
-//DESAFIO COMPLEMENTARIO - Interactuar con el HTML
+//DESAFIO COMPLEMENTARIO - Interactuar con el HTML + Incorporar Eventos
 
 class Formulario {
     constructor(nombre, telefono, mail, descripcion){
@@ -98,14 +97,21 @@ class Formulario {
     }
 }
 
-let listaClientes = []
+let listaClientes = [];
+let buttonEnviar = document.querySelector("#btnEnviar");
 
 const guardarCliente = () => {
-    let nombre = document.getElementById("nombre").value;
-    let telefono = document.getElementById("telefono").value;
-    let mail = document.getElementById("mail").value;
-    let descripcion = document.getElementById("descripcion").value;
+    let nombre = document.querySelector("#nombre").value;
+    let telefono = document.querySelector("#telefono").value;
+    let mail = document.querySelector("#mail").value;
+    let descripcion = document.getElementsByClassName("#field").value;
 
-    let nuevoCliente = new Formulario(nombre, telefono, mail, descripcion)
+    const nuevoCliente = new Formulario(nombre, telefono, mail, descripcion)
     listaClientes.push(nuevoCliente);
+    return listaClientes
 }
+
+buttonEnviar.addEventListener ("click", (e) => {
+    e.preventDefault()
+    guardarCliente()
+})
