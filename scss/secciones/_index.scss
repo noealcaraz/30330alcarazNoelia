@@ -1,16 +1,20 @@
 main {
-    background-color: #f8efd8;
+    background-color: #eadcc9 !important;
 }
+
 
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    background-color: #eadcc9;
     grid-template-areas: 
-    "cubreBotas pollerinS"
-    "pollerinM pollerinL";
+    "card01 card02 card03"
+    "card04 card05 card06"
+    "card07 card08 card09";
 }
 
 .card h3{

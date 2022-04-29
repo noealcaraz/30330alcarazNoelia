@@ -1,0 +1,40 @@
+main {
+    background-color: #f6a3c5;
+    .consulta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 60px 10px;
+        font-size: 40px;
+    }
+}
+
+.formulari {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    input {
+      padding: 5px;
+      margin: 10px;
+      width: 30vw;
+      font-family: 'Staatliches', cursive;
+      background-color: #f6a3c5;
+      color: black;
+      font-size: 20px;
+    }
+    fieldset {
+      padding: 5px;
+      font-family: 'Staatliches', cursive;
+      background-color: beige;
+      color: #7c3f58;
+      font-size: 20px;
+    }
+    button {
+      background-color: #643451;
+      color: beige;
+      font-family: 'Staatliches', cursive;
+      padding: 9px;
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+  }

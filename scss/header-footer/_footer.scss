@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    padding: 50px 100px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #643451;
+    color: #f6a3c5;
+    justify-content: space-between;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3px;
+    h2 {
+      color: #f6a3c5;
+      padding: 20px 0;
+      letter-spacing: 7px;
+      font-size: 40px;
+    }
+  }
+  
+  .redes li {
+    display: inline-block;
+    padding: 25px 20px;
+    img {
+      width: 40px;
+      &:hover {
+        transform: scale(0.8);
+        transition: all 0.4s;
+      }
+    }
+  }
