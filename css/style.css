@@ -55,6 +55,92 @@ a {
 main {
   background-color: #eadcc9 !important; }
 
+.cart-modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: 2;
+  transform: translateY(-200%);
+  transition: 0.5s ease-out; }
+
+.cart-modal-overlay.open {
+  transform: translateY(0%); }
+
+.cart-btn {
+  display: flex;
+  justify-content: center; }
+
+#cart {
+  display: flex;
+  font-size: 2rem;
+  color: beige;
+  cursor: pointer;
+  margin: 0; }
+
+.cart-quantity {
+  color: white;
+  background-color: #f6a3c5;
+  padding: 0.1em;
+  position: relative;
+  margin: 0em 11.5em 0em 0;
+  right: 0;
+  border: solid 2px #f6a3c5;
+  border-radius: 15px;
+  font-weight: bolder; }
+
+.cart-modal {
+  height: 80vh;
+  width: 50%;
+  background-color: #ecd3dd;
+  float: left;
+  overflow: scroll;
+  overflow-x: hidden; }
+
+#close-btn {
+  font-size: 1.5rem;
+  float: right;
+  margin: 0.5em 2em 0 0;
+  color: white;
+  cursor: pointer; }
+
+.cart-is-empty {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  display: none; }
+
+.product-rows {
+  margin-top: 3em;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.total {
+  text-align: center;
+  margin: 2em 0 2em 0;
+  /*   display: none; */ }
+
+.cart-total {
+  color: black; }
+
+.total-price {
+  color: black;
+  font-size: 2rem;
+  display: block; }
+
+.purchase-btn {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: #774e5f;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 2em 0 1em 0; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -64,13 +150,25 @@ main {
   background-color: #eadcc9;
   grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
 
+.agregar-carrito {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: #774e5f;
+  color: white;
+  padding: 0.2em 0.4em;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 2em 0 1em 0; }
+
 .card h3 {
-  font-family: 'Staatliches';
+  font-family: "Staatliches";
   padding: 20px; }
   .card h3 button {
     background-color: #301f0a;
     color: #f8efd8;
-    font-family: 'Staatliches'; }
+    font-family: "Staatliches"; }
 
 main {
   background-color: #f6a3c5; }
