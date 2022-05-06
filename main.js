@@ -4,7 +4,7 @@
 const cart = document.querySelector("#cart");
 const cartModalOverlay = document.querySelector(".cart-modal-overlay");
 const cerrarBtn = document.querySelector("#close-btn");
-const aniadir = document.getElementsByClassName("agregar-carrito"); 
+const aniadir = document.querySelectorAll(".agregar-carrito"); 
 const productRows = document.getElementsByClassName(".product-rows"); 
 
 //abrir el carrito
@@ -25,16 +25,16 @@ cartModalOverlay.addEventListener("click", (e)=>{
 //asignarle a cada boton, su funcion
 for (let i=0; i < aniadir.length; i++) {
     let boton = aniadir[i];
-    boton.addEventListener("click", agregarCarrito());
+    boton.addEventListener("click", agregarCarrito);
 }
 
 function agregarCarrito(e) {
     let boton = e.target;
-    let cartItem = boton.parentElement;
+    let cartItem = boton.parentElement.parentElement.parentElement;
     let prodId = cartItem.getAttribute("id");
     let prodName = cartItem.querySelector(".card-title").innerText;
     let price = cartItem.querySelector(".card-text").innerText;
-    let imageSrc = cartItem.querySelector(".card-img-top").src;
+    let imageSrc = cartItem.querySelector(".card-img-top".parentElement);
 
     agregarElem(prodId, prodName, price, imageSrc);
 }
@@ -47,13 +47,15 @@ function agregarElem(prodId, prodName, price, imageSrc){
     //chequeo de si el producto se añadió o no
     for(let i=0; i < prodArray.length; i++) {
         if(prodArray[i].getAttribute("id")== prodId) {
-            alert("Este producto ya existe en el carrito");
+            swal("¡Este producto ya existe en el carrito!");
             return;
+        } else {
+            swal("¡Producto añadido al carrito con éxito!");
         }
     }
     //inyectar el html al carrito
     let cartRowItem = `
-        <div class="product-row" id="${prodId}">
+        <div class="product-rows" id="${prodId}">
             <img class="cart-image" src="${imageSrc}">
             <span>${prodName}</span>
             <span class="cart-price">${price}</span>
@@ -89,14 +91,13 @@ function cambiarCantidad(e){
 function updatePrice() {
     let total = 0;
     for(const producto of productRows) {
-        let price = parseFloat(producto.querySelector(".cart-price").innerText.replace("$",""));
+        let price = parseFloat(producto.querySelector(".cart-text").innerText.replace("$",""));
         let cantidad = producto.querySelector(".product-quantity").value;
         total += price * cantidad;
     }
     document.querySelector(".total-price").innerText = "$" + total;
     document.querySelector(".cart-quantity").textContent = productRows.length;
 }
-
 
 
 

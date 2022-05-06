@@ -8,7 +8,7 @@ class Formulario {
     }
 }
 
-let listaClientes = [];
+let listaClientes =  [];
 let buttonEnviar = document.querySelector("#btnEnviar");
 
 const guardarCliente = () => {
@@ -16,22 +16,20 @@ const guardarCliente = () => {
     let telefono = document.querySelector(".telefono").value;
     let mail = document.querySelector(".mail").value;
 
-    const nuevoCliente = new Formulario(nombre, telefono, mail)
-    if (nuevoCliente === null){
-      alert("Completa todos los campos");
+    let nuevoCliente = new Formulario(nombre, telefono, mail)    
+
+    if (localStorage.getItem('clientes') == null) {
+      listaClientes.push(nuevoCliente);
+      localStorage.setItem("nuevoCliente", JSON.stringify(nuevoCliente));
+    } else {
+      const listaNueva = JSON.parse(localStorage.getItem("clientes"));
+      listaNueva.push(nuevoCliente);
+      localStorage.setItem("clientes", JSON.stringify(listaNueva));
     }
-    console.log(listaClientes.push(nuevoCliente));
-    localStorage.setItem("nuevoCliente", JSON.stringify(nuevoCliente));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    let formulario = document.getElementsByTagName('fieldset');
-    formulario.addEventListener('submit', (e) => {
-        e.preventDefault()
-        formulario.reset()
-    });
-});
 
 btnEnviar.addEventListener("click", (e) => {
+    guardarCliente();
     e.reset();
 })
