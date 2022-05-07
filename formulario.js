@@ -8,28 +8,37 @@ class Formulario {
     }
 }
 
-let listaClientes =  [];
 let buttonEnviar = document.querySelector("#btnEnviar");
 
 const guardarCliente = () => {
     let nombre = document.querySelector(".nombre").value;
     let telefono = document.querySelector(".telefono").value;
     let mail = document.querySelector(".mail").value;
+    let nuevoCliente = new Formulario(nombre, telefono, mail)
 
-    let nuevoCliente = new Formulario(nombre, telefono, mail)    
+    const clientesActuales = localStorage.getItem('listaDeClientes')
 
-    if (localStorage.getItem('clientes') == null) {
-      listaClientes.push(nuevoCliente);
-      localStorage.setItem("nuevoCliente", JSON.stringify(nuevoCliente));
+    if (!clientesActuales) {
+      const listaDeClientes = [nuevoCliente]
+      localStorage.setItem("listaDeClientes", JSON.stringify(listaDeClientes));
     } else {
-      const listaNueva = JSON.parse(localStorage.getItem("clientes"));
-      listaNueva.push(nuevoCliente);
-      localStorage.setItem("clientes", JSON.stringify(listaNueva));
+      const listaExistente = JSON.parse(clientesActuales);
+      const listaNueva = listaExistente.concat(nuevoCliente);
+      localStorage.setItem("listaDeClientes", JSON.stringify(listaNueva));
     }
 }
 
+const imprimirClientes = () => {
+  const listaDeClientes = localStorage.getItem('listaDeClientes')
+  if (listaDeClientes) {
+    const clientes = JSON.parse(listaDeClientes)
+    clientes.forEach(cliente => {
+      console.log(cliente.nombre)
+    })
+  }
+}
 
 btnEnviar.addEventListener("click", (e) => {
     guardarCliente();
-    e.reset();
+    imprimirClientes()
 })

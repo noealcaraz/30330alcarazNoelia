@@ -1,11 +1,11 @@
 // - SEGUNDA ENTREGA DEL PROYECTO FINAL -
 
-//Variables
+// Constantes
 const cart = document.querySelector("#cart");
 const cartModalOverlay = document.querySelector(".cart-modal-overlay");
 const cerrarBtn = document.querySelector("#close-btn");
 const aniadir = document.querySelectorAll(".agregar-carrito"); 
-const productRows = document.getElementsByClassName(".product-rows"); 
+
 
 //abrir el carrito
 cart.addEventListener("click",()=>{
@@ -29,14 +29,14 @@ for (let i=0; i < aniadir.length; i++) {
 }
 
 function agregarCarrito(e) {
-    let boton = e.target;
-    let cartItem = boton.parentElement.parentElement.parentElement;
-    let prodId = cartItem.getAttribute("id");
-    let prodName = cartItem.querySelector(".card-title").innerText;
-    let price = cartItem.querySelector(".card-text").innerText;
-    let imageSrc = cartItem.querySelector(".card-img-top".parentElement);
+  let boton = e.target;
+  let card = boton.parentElement.parentElement;
+  let prodId = card.getAttribute("id");
+  let prodName = card.querySelector(".card-title").innerText;
+  let price = card.querySelector(".card-text").innerText;
+  let imageSrc = card.querySelector(".card-img-top").src;
 
-    agregarElem(prodId, prodName, price, imageSrc);
+  agregarElem(prodId, prodName, price, imageSrc);
 }
 
 function agregarElem(prodId, prodName, price, imageSrc){
@@ -55,10 +55,10 @@ function agregarElem(prodId, prodName, price, imageSrc){
     }
     //inyectar el html al carrito
     let cartRowItem = `
-        <div class="product-rows" id="${prodId}">
+        <div class="product-row" id="${prodId}">
             <img class="cart-image" src="${imageSrc}">
             <span>${prodName}</span>
-            <span class="cart-price">${price}</span>
+            <span class="cart-price" >${price}</span>
             <input class="product-quantity" type="number" value="1">
             <button class="remove-btn">Borrar</button>
         </div>
@@ -89,14 +89,20 @@ function cambiarCantidad(e){
 
 //actualizar el total
 function updatePrice() {
-    let total = 0;
-    for(const producto of productRows) {
-        let price = parseFloat(producto.querySelector(".cart-text").innerText.replace("$",""));
-        let cantidad = producto.querySelector(".product-quantity").value;
-        total += price * cantidad;
-    }
-    document.querySelector(".total-price").innerText = "$" + total;
-    document.querySelector(".cart-quantity").textContent = productRows.length;
+  const productRowsDiv = document.getElementById("product-rows");
+  const productRows = productRowsDiv.querySelectorAll(".product-row")
+  debugger
+  let total = 0;
+  for (const producto of productRows) {
+      let price = parseFloat(producto.querySelector(".cart-price").innerText.replace("$","").replace(/\./g, '').replace(',', '.'));
+      let cantidad = producto.querySelector(".product-quantity").value;
+      console.log({price, cantidad})
+      total += price * cantidad;
+      console.log({total})
+  }
+
+  document.querySelector(".total-price").innerText = "$" + total;
+  document.querySelector(".cart-quantity").textContent = productRows.length;
 }
 
 
