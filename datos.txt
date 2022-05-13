@@ -1,0 +1,74 @@
+<div class="container" id="lista-productos">
+    <div class="card" style="width: 18rem" id="card01">
+        <img src="./images/cubrebotas.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Cubre botas</h5>
+            <p class="card-text">$900,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card02">
+        <img src="./images/pollerinok01.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card03">
+        <img src="./images/pollerinok02.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card04">
+        <img src="./images/pollerinok03.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card05">
+        <img src="./images/cubrebotas.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Cubre botas</h5>
+            <p class="card-text">$900,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card06">
+        <img src="./images/pollerinok01.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card07">
+        <img src="./images/pollerinok02.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card08">
+        <img src="./images/pollerinok03.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Pollerin</h5>
+            <p class="card-text">$1.500,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem" id="card09">
+        <img src="./images/cubrebotas.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Cubre botas</h5>
+            <p class="card-text">$900,00</p>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,29 @@
 // - SEGUNDA ENTREGA DEL PROYECTO FINAL -
+const container = document.querySelector(".container")
+
+const cargarCards = () => {
+    fetch ("productos.json")
+        .then(response => response.json())
+        .then(result => {
+            let products = result
+            products.forEach(card => {
+                container.innerHTML += `
+                <div class="card" style="width: 18rem" id="card01">
+                <img src="${card.imagen}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">${card.producto}</h5>
+                    <p class="card-text">$${card.precio}</p>
+                    <button class="agregar-carrito">${card.boton}</button>
+                </div>
+            </div>
+                `
+            })
+        })
+        .catch(error => console.log(error))
+        
+}
+
+cargarCards()
 
 // Constantes
 const cart = document.querySelector("#cart");
@@ -91,7 +116,6 @@ function cambiarCantidad(e){
 function updatePrice() {
   const productRowsDiv = document.getElementById("product-rows");
   const productRows = productRowsDiv.querySelectorAll(".product-row")
-  debugger
   let total = 0;
   for (const producto of productRows) {
       let price = parseFloat(producto.querySelector(".cart-price").innerText.replace("$","").replace(/\./g, '').replace(',', '.'));
