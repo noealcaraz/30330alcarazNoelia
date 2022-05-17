@@ -18,7 +18,13 @@ const cargarCards = () => {
             </div>
                 `
             })
-        })
+            const aniadir = document.querySelectorAll(".agregar-carrito");
+            for (let i=0; i < aniadir.length; i++) {
+                let boton = aniadir[i];
+                boton.addEventListener("click", agregarCarrito);
+            }
+        }
+        )
         .catch(error => console.log(error))
         
 }
