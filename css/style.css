@@ -3,103 +3,66 @@
   padding: 0px;
   box-sizing: border-box; }
 
-header {
-  display: flex;
-  background-color: #5e4f53;
-  height: 18vh;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px; }
-  header .pepito {
-    color: #5e4f53; }
-  header .logo {
-    display: flex;
-    align-items: center; }
-    header .logo img {
-      height: 50px;
-      margin-right: 15px; }
-    header .logo a {
-      font-size: 70px;
-      font-family: 'Staatliches', cursive;
-      letter-spacing: 5px;
-      text-align: center;
-      color: #f6a3c5; }
-  header ul {
-    display: flex;
-    margin: 10px 200px; }
-    header ul li {
-      list-style: none;
-      margin: 0 20px; }
-      header ul li a {
-        color: beige;
-        font-size: 20px;
-        transition: 0.4s all ease 0s;
-        text-decoration: none;
-        font-family: 'Staatliches', cursive;
-        letter-spacing: 0.4px; }
-        header ul li a:hover {
-          text-decoration: none;
-          transition: ease-in;
-          color: #98606c;
-          font-size: 20px; }
-      header ul li .submenu {
-        vertical-align: top; }
-      header ul li img {
-        width: 30px; }
-        header ul li img:hover {
-          transition: all; }
+.nav-link {
+  color: black;
+  font-family: "Staatliches", cursive;
+  font-size: 20px; }
 
-a {
-  text-decoration: none; }
+.navbar-toggler-icon {
+  color: black; }
 
 main {
   background-color: #eadcc9 !important; }
 
+.carousel {
+  width: auto;
+  height: 680px; }
+
 .cart-modal-overlay {
   position: fixed;
-  width: 100vw;
+  width: 110vw;
   height: 100%;
   z-index: 2;
-  transform: translateY(-200%);
-  transition: 0.5s ease-out; }
+  transform: translateY(180%);
+  transition: .5s ease-out; }
 
 .cart-modal-overlay.open {
-  transform: translateY(0%); }
+  transform: translateY(41%); }
 
 .cart-btn {
   display: flex;
-  justify-content: center; }
+  justify-content: flex-end; }
 
 #cart {
   display: flex;
   font-size: 2rem;
-  color: beige;
+  color: black;
   cursor: pointer;
-  margin: 0; }
+  margin: 5px; }
 
 .cart-quantity {
   color: white;
   background-color: #f6a3c5;
-  padding: 0.1em;
+  padding: .1em .2em;
   position: relative;
-  margin: 0em 11.5em 0em 0;
+  margin: .1em 7.5em .7em 0;
   right: 0;
   border: solid 2px #f6a3c5;
   border-radius: 15px;
   font-weight: bolder; }
 
 .cart-modal {
-  height: 80vh;
-  width: 50%;
+  height: 90vh;
+  float: inline-start;
+  width: 40%;
   background-color: #ecd3dd;
-  float: left;
   overflow: scroll;
   overflow-x: hidden; }
 
 #close-btn {
   font-size: 1.5rem;
   float: right;
-  margin: 0.5em 2em 0 0;
+  margin: .5em 2em 0 0;
   color: white;
   cursor: pointer; }
 
@@ -150,7 +113,7 @@ main {
   gap: 40px;
   padding: 40px;
   background-color: #eadcc9;
-  grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
+  grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
 
 .agregar-carrito {
   font-size: 1rem;
@@ -174,7 +137,7 @@ main {
   margin-left: 0.5rem; }
 
 .remove-btn {
-  padding: 1em 2em;
+  padding: .4em .8em;
   background-color: grey;
   color: black;
   outline: none;
@@ -193,6 +156,15 @@ main {
     background-color: #301f0a;
     color: #f8efd8;
     font-family: "Staatliches"; }
+
+.destacados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; }
+
+.d-flex {
+  width: 300px; }
 
 main {
   background-color: #f6a3c5; }

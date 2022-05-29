@@ -31,6 +31,37 @@ const cargarCards = () => {
 
 cargarCards()
 
+//Buscador
+
+const buscador = document.querySelector("#buscador");
+const buscar = document.querySelector("#buscar");
+const resultado = document.querySelector("#resultado");
+
+const filtrar = () => {
+    // console.log(buscador.value);
+    resultado.innerHTML = '';
+
+    const texto = buscador.value.toLowerCase();
+
+    for (let producto of productos) {
+        let nombre = producto.nombre.toLowerCase();
+        if (nombre.indexOf(texto) !== -1){
+            resultado.innerHTML += `
+            <li>${producto.nombre} - Valor: $${producto.valor}</li>
+            `
+        }
+        
+    }
+    if(resultado.innerHTML === ''){
+            resultado.innerHTML += `
+                <li>Producto no encontrado...</li>
+            `
+    }
+    
+}
+buscar.addEventListener('click', filtrar);
+
+
 // Constantes
 const cart = document.querySelector("#cart");
 const cartModalOverlay = document.querySelector(".cart-modal-overlay");

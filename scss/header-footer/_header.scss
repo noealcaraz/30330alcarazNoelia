@@ -1,61 +1,11 @@
-header {
-    display: flex;
-    background-color: #5e4f53;
-    height: 18vh;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    .pepito {
-        color: #5e4f53;
-    }
-    .logo {
-        display: flex;
-        align-items: center;
-        img {
-            height: 50px;
-            margin-right: 15px;
-        }
-        a {
-            font-size: 70px;
-            font-family: 'Staatliches', cursive;
-            letter-spacing: 5px;
-            text-align: center;
-            color: #f6a3c5;
-        }
-    }   
-    ul {
-        display: flex;
-        margin: 10px 200px;
-        li {
-            list-style: none;
-            margin: 0 20px;
-            a {
-              color: beige;
-              font-size: 20px;
-              transition: 0.4s all ease 0s;
-              text-decoration: none;
-              font-family: 'Staatliches', cursive;
-              letter-spacing: 0.4px;
-              &:hover {
-                text-decoration: none;
-                transition: ease-in;
-                color: #98606c;
-                font-size: 20px;
-              }
-            }
-            .submenu {
-                vertical-align: top;
-            }
-            img {
-                width: 30px;
-                &:hover {
-                    transition: all;
-                }
-            }
-        }
-    }
+
+
+.nav-link{
+    color: black;
+    font-family: $letrita;
+    font-size: 20px;
 }
 
-a{
-    text-decoration: none;
+.navbar-toggler-icon{
+    color: black;
 }
