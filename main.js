@@ -116,8 +116,8 @@ function agregarElem(prodId, prodName, price, imageSrc){
     let productRows = document.querySelector(".product-rows");
     let prodArray = document.getElementsByClassName("product-rows");
 
-    //Chequea de si el producto se añadió o no
-    for(let i=0; i < prodArray.length; i++) {
+    //Chequea si el producto se añadió o no
+    for (let i=0; i < prodArray.length; i++) {
         if(prodArray[i].getAttribute("id") === prodId) {
             swal("¡Este producto ya existe en el carrito!");
             return;
@@ -125,6 +125,7 @@ function agregarElem(prodId, prodName, price, imageSrc){
             swal("¡Producto añadido al carrito con éxito!");
         }
     }
+
     //Inyecta el html al carrito
     let cartRowItem = `
         <div class="product-row" id="${prodId}">
