@@ -4,8 +4,12 @@
     color: black;
     font-family: $letrita;
     font-size: 20px;
+    &:hover{
+        color: $clarito;
+    }
 }
 
 .navbar-toggler-icon{
     color: black;
 }
+

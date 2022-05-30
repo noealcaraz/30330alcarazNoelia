@@ -1,14 +1,14 @@
 [
-    {"producto": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "boton": "Añadir al carrito"},
-    {"producto": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "boton": "Añadir al carrito"},
-    {"producto": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "boton": "Añadir al carrito"},
-    {"producto": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "boton": "Añadir al carrito"}
+    {"nombre": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "id": "card1", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "id": "card2", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "id": "card3", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "id": "card4", "boton": "Añadir al carrito"},
+    {"nombre": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "id": "card5", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "id": "card6", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "id": "card7", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "id": "card8", "boton": "Añadir al carrito"},
+    {"nombre": "Cubre Botas", "precio": 900, "imagen": "./images/cubrebotas.webp", "id": "card9", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin S", "precio": 1500, "imagen": "./images/pollerinok01.png", "id": "card10", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1600, "imagen": "./images/pollerinok02.png", "id": "card11", "boton": "Añadir al carrito"},
+    {"nombre": "Pollerin M", "precio": 1800, "imagen": "./images/pollerinok03.png", "id": "card12", "boton": "Añadir al carrito"}
 ]

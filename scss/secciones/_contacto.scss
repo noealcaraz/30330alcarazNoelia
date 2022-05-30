@@ -1,38 +1,55 @@
-main {
-    background-color: #f6a3c5;
-    .consulta {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 60px 10px;
-        font-size: 40px;
-    }
+.container2 {
+  display: grid;
+  grid-gap: 140px;
+  padding: 20px 10px 69px 30px;
+  grid-template-columns: 220px 220px 220px;
+  background-color: $reclarito;
+  grid-template-areas:
+    "consulta consulta formulario"
+    "consulta consulta formulario";
+}
+
+.consulta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 60px;
+  margin: 0;
+  font-size: 40px;
+  font-family: $letrita;
+  background-color: $reclarito;
+  grid-area: consulta;
+
 }
 
 .formulari {
-    background-color: beige;
+    background-color: $reclarito;
     display: flex;
     justify-content: center;
+    grid-area: formulario;
     input {
       padding: 5px;
       margin: 10px;
       width: 30vw;
-      font-family: 'Staatliches', cursive;
-      background-color: #f6a3c5;
+      font-family: $letrita;
+      background-color: #ead5d3;
       color: black;
       font-size: 20px;
     }
     fieldset {
       padding: 5px;
-      font-family: 'Staatliches', cursive;
-      background-color: beige;
-      color: #7c3f58;
+      font-family: $letrita;
+      background-color: $reclarito;
+      color: $reclarito;
       font-size: 20px;
     }
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #643451;
-      color: beige;
-      font-family: 'Staatliches', cursive;
+      color: $reclarito;
+      font-family: $letrita;
       padding: 9px;
       margin: 10px;
       font-size: 1.5rem;

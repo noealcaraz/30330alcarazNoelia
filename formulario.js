@@ -38,7 +38,20 @@ const imprimirClientes = () => {
   }
 }
 
+const clickEnviar = () => {
+  let nombre = document.querySelector(".nombre").value;
+  let telefono = document.querySelector(".telefono").value;
+  let mail = document.querySelector(".mail").value;
+  if (nombre === "" || telefono === "" || mail === "") {
+    swal("", "Debes completar todos los campos", "warning");
+  } else {
+    swal("¡Muchas gracias!", "A la brevedad nos contactaremos", "success");
+  }
+}
+
 btnEnviar.addEventListener("click", (e) => {
+    clickEnviar();
     guardarCliente();
-    imprimirClientes()
+    imprimirClientes();
 })
+

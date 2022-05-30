@@ -7,16 +7,14 @@
   color: black;
   font-family: "Staatliches", cursive;
   font-size: 20px; }
+  .nav-link:hover {
+    color: #b17adf; }
 
 .navbar-toggler-icon {
   color: black; }
 
 main {
-  background-color: #eadcc9 !important; }
-
-.carousel {
-  width: auto;
-  height: 680px; }
+  background-color: #f9f8fa !important; }
 
 .cart-modal-overlay {
   position: fixed;
@@ -39,20 +37,22 @@ main {
   color: black;
   cursor: pointer;
   margin: 5px; }
+  #cart:hover {
+    color: #632d68; }
 
 .cart-quantity {
   color: white;
-  background-color: #f6a3c5;
+  background-color: #b17adf;
   padding: .1em .2em;
   position: relative;
   margin: .1em 7.5em .7em 0;
   right: 0;
-  border: solid 2px #f6a3c5;
+  border: solid 2px #b17adf;
   border-radius: 15px;
   font-weight: bolder; }
 
 .cart-modal {
-  height: 90vh;
+  height: 100vh;
   float: inline-start;
   width: 40%;
   background-color: #ecd3dd;
@@ -66,18 +66,15 @@ main {
   color: white;
   cursor: pointer; }
 
-.cart-is-empty {
-  color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1em;
-  display: none; }
-
 .product-rows {
+  display: grid;
   margin-top: 3em;
   width: 95%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px; }
 
 .total {
   text-align: center;
@@ -85,26 +82,37 @@ main {
   /*   display: none; */ }
 
 .cart-total {
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-family: "Staatliches", cursive;
   color: black;
-  margin: 10px 0 0 20px; }
+  margin: 30px 0 0 30px; }
 
 .total-price {
   color: black;
   font-size: 2rem;
-  display: block; }
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder; }
 
 .purchase-btn {
   font-size: 1rem;
   font-weight: bolder;
-  background-color: #774e5f;
-  color: white;
+  background-color: #632d68;
+  color: #f9f8fa;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 3px;
   padding: 1em 2em;
   border-radius: 10px;
   outline: none;
   border: none;
   cursor: pointer;
   margin: 2em 0 1em 0; }
+  .purchase-btn:hover {
+    background-color: #b17adf;
+    color: #632d68; }
 
 .container {
   display: grid;
@@ -112,23 +120,25 @@ main {
   grid-template-rows: 1fr 1fr;
   gap: 40px;
   padding: 40px;
-  background-color: #eadcc9;
   grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
 
 .agregar-carrito {
   font-size: 1rem;
   font-weight: bolder;
-  background-color: #774e5f;
-  color: white;
+  background-color: #632d68;
+  color: #f9f8fa;
   padding: 0.2em 0.4em;
   border-radius: 10px;
   outline: none;
   border: none;
   cursor: pointer;
   margin: 2em 0 1em 0; }
+  .agregar-carrito:hover {
+    color: #632d68;
+    background-color: #f9f8fa; }
 
 .cart-image {
-  width: 10rem;
+  width: 6rem;
   margin: 1em; }
 
 .product-quantity {
@@ -138,90 +148,184 @@ main {
 
 .remove-btn {
   padding: .4em .8em;
-  background-color: grey;
-  color: black;
+  background-color: #632d68;
+  color: #f9f8fa;
   outline: none;
-  border: none;
+  border: #632d68;
+  border-radius: 10px;
   cursor: pointer;
   margin-left: 1rem;
   font-weight: bolder;
-  font-size: 1rem; }
+  font-size: 1rem;
+  letter-spacing: 2px; }
   .remove-btn:active {
     transform: translateY(4px); }
+  .remove-btn:hover {
+    background-color: #b17adf;
+    color: #632d68; }
 
 .card h3 {
-  font-family: "Staatliches";
+  font-family: "Staatliches", cursive;
   padding: 20px; }
   .card h3 button {
     background-color: #301f0a;
     color: #f8efd8;
-    font-family: "Staatliches"; }
+    font-family: "Staatliches", cursive; }
+
+.destacado {
+  background-color: #632d68; }
 
 .destacados {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; }
+  padding: 20px;
+  margin: 0;
+  font-family: "Staatliches", cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #f9f8fa;
+  animation: animate 2s linear infinite; }
+
+@keyframes animate {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.card-title {
+  font-family: "Staatliches", cursive;
+  font-size: 28px; }
+
+.card-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  font-size: 20px; }
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition: 1.5s; }
+
+#buscar {
+  color: black;
+  border-color: black; }
+  #buscar:hover {
+    background-color: #b17adf;
+    color: #f9f8fa;
+    border-color: #f9f8fa;
+    font-weight: 500;
+    box-shadow: #b17adf; }
 
 .d-flex {
   width: 300px; }
 
-main {
-  background-color: #f6a3c5; }
-  main .consulta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 60px 10px;
-    font-size: 40px; }
+.swal-button {
+  background-color: #632d68;
+  color: #f9f8fa; }
+  .swal-button:hover {
+    background-color: #b17adf !important;
+    color: #632d68; }
+
+.swal-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: black; }
+
+.card-product {
+  font-family: "Staatliches", cursive;
+  font-size: 30px;
+  padding: 10px; }
+
+.preguntasFrecuentes {
+  display: block;
+  font-family: "Staatliches", cursive;
+  font-size: 30px;
+  list-style: none; }
+  .preguntasFrecuentes a {
+    padding: auto;
+    margin: 30px;
+    color: #632d68;
+    text-decoration: none; }
+    .preguntasFrecuentes a:hover {
+      color: #b17adf;
+      background-color: #ffa3da; }
+
+.container2 {
+  display: grid;
+  grid-gap: 140px;
+  padding: 20px 10px 69px 30px;
+  grid-template-columns: 220px 220px 220px;
+  background-color: #f9f8fa;
+  grid-template-areas: "consulta consulta formulario" "consulta consulta formulario"; }
+
+.consulta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 60px;
+  margin: 0;
+  font-size: 40px;
+  font-family: "Staatliches", cursive;
+  background-color: #f9f8fa;
+  grid-area: consulta; }
 
 .formulari {
-  background-color: beige;
+  background-color: #f9f8fa;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  grid-area: formulario; }
   .formulari input {
     padding: 5px;
     margin: 10px;
     width: 30vw;
-    font-family: 'Staatliches', cursive;
-    background-color: #f6a3c5;
+    font-family: "Staatliches", cursive;
+    background-color: #ead5d3;
     color: black;
     font-size: 20px; }
   .formulari fieldset {
     padding: 5px;
-    font-family: 'Staatliches', cursive;
-    background-color: beige;
-    color: #7c3f58;
+    font-family: "Staatliches", cursive;
+    background-color: #f9f8fa;
+    color: #f9f8fa;
     font-size: 20px; }
   .formulari button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #643451;
-    color: beige;
-    font-family: 'Staatliches', cursive;
+    color: #f9f8fa;
+    font-family: "Staatliches", cursive;
     padding: 9px;
     margin: 10px;
     font-size: 1.5rem; }
 
 .footer {
   display: flex;
-  padding: 50px 100px;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #643451;
-  color: #f6a3c5;
+  background-color: #632d68;
+  color: #f9f8fa;
   justify-content: space-between;
   font-family: 'Staatliches', cursive;
   letter-spacing: 3px; }
   .footer h2 {
-    color: #f6a3c5;
-    padding: 20px 0;
+    color: #f9f8fa;
+    padding: 10px 0;
     letter-spacing: 7px;
-    font-size: 40px; }
+    font-size: 30px; }
+  .footer h3 {
+    color: black;
+    font-size: 25px;
+    margin: 0; }
 
 .redes li {
   display: inline-block;
-  padding: 25px 20px; }
+  padding: 15px 10px; }
   .redes li img {
-    width: 40px; }
+    width: 30px; }
     .redes li img:hover {
       transform: scale(0.8);
       transition: all 0.4s; }

@@ -1,0 +1,17 @@
+.preguntasFrecuentes{
+    display: block;
+    font-family: $letrita;
+    font-size: 30px;
+    list-style: none;
+    
+    a{
+        padding: auto;
+        margin: 30px;
+        color: $oscuro;
+        text-decoration: none;
+        &:hover{
+            color: $clarito;
+            background-color: #ffa3da;
+        }
+    }
+}

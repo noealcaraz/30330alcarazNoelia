@@ -1,10 +1,5 @@
 main {
-  background-color: #eadcc9 !important;
-}
-
-.carousel { 
-  width: auto; 
-  height: 680px; 
+  background-color: #f9f8fa !important;
 }
 
 .cart-modal-overlay {
@@ -30,6 +25,9 @@ main {
   color: black;
   cursor: pointer;
   margin: 5px;
+  &:hover{
+    color: $oscuro;
+  }
 }
 
 .cart-quantity {
@@ -45,7 +43,7 @@ main {
 }
 
 .cart-modal {
-  height: 90vh;
+  height: 100vh;
   float: inline-start;
   width: 40%;
   background-color: #ecd3dd;
@@ -62,19 +60,16 @@ main {
     cursor: pointer;
 }
 
-.cart-is-empty {
-  color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1em;
-  display: none;
-}
 
 .product-rows {
+  display: grid;
   margin-top: 3em;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
 .total {
@@ -84,28 +79,40 @@ main {
 }
 
 .cart-total {
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-family: $letrita;
   color: black;
-  margin: 10px 0 0 20px;
+  margin: 30px 0 0 30px;
 }
 
 .total-price {
   color: black;
   font-size: 2rem;
   display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
 }
 
 .purchase-btn {
   font-size: 1rem;
   font-weight: bolder;
-  background-color: #774e5f;
-  color: white;
+  background-color: $oscuro;
+  color: $reclarito;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 3px;
   padding: 1em 2em;
   border-radius: 10px;
   outline: none;
   border: none;
   cursor: pointer;
   margin: 2em 0 1em 0;
+  &:hover{
+    background-color: $clarito;
+    color: $oscuro;
+  }
 }
 
 .container {
@@ -114,7 +121,6 @@ main {
   grid-template-rows: 1fr 1fr;
   gap: 40px;
   padding: 40px;
-  background-color: #eadcc9;
   grid-template-areas:
     "card01 card02 card03"
     "card04 card05 card06"
@@ -124,18 +130,22 @@ main {
 .agregar-carrito{
   font-size: 1rem;
   font-weight: bolder;
-  background-color: #774e5f;
-  color: white;
+  background-color: $oscuro;
+  color: $reclarito;
   padding: 0.2em 0.4em;
   border-radius: 10px;
   outline: none;
   border: none;
   cursor: pointer;
   margin: 2em 0 1em 0;
+  &:hover{
+    color: $oscuro;
+    background-color: $reclarito;
+  }
 }
 
 .cart-image {
-  width: 10rem;
+  width: 6rem;
   margin: 1em;
 }
 
@@ -147,37 +157,112 @@ main {
 
 .remove-btn {
   padding: .4em .8em;
-  background-color: grey;
-  color: black;
+  background-color: $oscuro;
+  color: $reclarito;
   outline: none;
-  border: none;
+  border: $oscuro;
+  border-radius: 10px;
   cursor: pointer;
   margin-left: 1rem;
   font-weight: bolder;
   font-size: 1rem;
+  letter-spacing: 2px;
   &:active {
     transform: translateY(4px);
+  }
+  &:hover{
+    background-color: $clarito;
+    color: $oscuro;
   }
 }
 
 .card h3 {
-  font-family: "Staatliches";
+  font-family: $letrita;
   padding: 20px;
   button {
     background-color: #301f0a;
     color: #f8efd8;
-    font-family: "Staatliches";
+    font-family: $letrita;
   }
+}
+
+.destacado{
+  background-color: $oscuro;
 }
 
 .destacados {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  padding: 20px;
+  margin: 0;
+  font-family: $letrita;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: $reclarito;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
+.card-title {
+  font-family: $letrita;
+  font-size: 28px;
+}
+
+.card-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-img-top:hover{
+  transform: scale(1.1);
+  transition: 1.5s;
+}
+
+#buscar {
+  color: black;
+  border-color: black;
+  &:hover{
+    background-color: $clarito;
+    color: $reclarito;
+    border-color: $reclarito;
+    font-weight: 500;
+    box-shadow: $clarito;
+  }
+}
 .d-flex{
   width: 300px;
+}
+
+.swal-button {
+  background-color: $oscuro;
+  color: $reclarito;
+  &:hover{
+    background-color: $clarito !important;
+    color: $oscuro;
+  }
+}
+
+.swal-text{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.card-product{
+  font-family: $letrita;
+  font-size: 30px;
+  padding: 10px;
 }
 

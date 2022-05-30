@@ -1,26 +1,31 @@
 .footer {
     display: flex;
-    padding: 50px 100px;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #643451;
-    color: #f6a3c5;
+    background-color: $oscuro;
+    color: $reclarito;
     justify-content: space-between;
     font-family: 'Staatliches', cursive;
     letter-spacing: 3px;
     h2 {
-      color: #f6a3c5;
-      padding: 20px 0;
+      color: $reclarito;
+      padding: 10px 0;
       letter-spacing: 7px;
-      font-size: 40px;
+      font-size: 30px;
+    }
+    h3{
+      color: black;
+      font-size: 25px;
+      margin: 0;
     }
   }
   
   .redes li {
     display: inline-block;
-    padding: 25px 20px;
+    padding: 15px 10px;
     img {
-      width: 40px;
+      width: 30px;
       &:hover {
         transform: scale(0.8);
         transition: all 0.4s;
