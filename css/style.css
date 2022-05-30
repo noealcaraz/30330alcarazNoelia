@@ -120,7 +120,7 @@ main {
   grid-template-rows: 1fr 1fr;
   gap: 40px;
   padding: 40px;
-  grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
+  grid-template-areas: "card01 card02 card03" "card04 card05 card06" "card07 card08 card09"; }
 
 .agregar-carrito {
   font-size: 1rem;
@@ -258,7 +258,7 @@ main {
   padding: 20px 10px 69px 30px;
   grid-template-columns: 220px 220px 220px;
   background-color: #f9f8fa;
-  grid-template-areas: "consulta consulta formulario" "consulta consulta formulario"; }
+  grid-template-areas: "consulta consulta formulario" "consulta consulta formulario"; }
 
 .consulta {
   display: flex;
