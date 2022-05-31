@@ -114,15 +114,15 @@ function agregarCarrito(e) {
 function agregarElem(prodId, prodName, price, imageSrc){
     let productRow = document.createElement("div");
     let productRows = document.querySelector(".product-rows");
-    let prodArray = document.getElementsByClassName("product-rows");
+    let prodArray = document.getElementsByClassName("product-row");
 
     //Chequea si el producto se añadió o no
     for (let i=0; i < prodArray.length; i++) {
         if(prodArray[i].getAttribute("id") === prodId) {
-            swal("¡Este producto ya existe en el carrito!");
+            swal("", "Este producto ya existe en el carrito", "error");
             return;
         } else {
-            swal("¡Producto añadido al carrito con éxito!");
+            swal("", "¡Producto añadido al carrito con éxito!", "success");
         }
     }
 
