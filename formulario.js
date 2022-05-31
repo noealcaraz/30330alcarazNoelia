@@ -47,7 +47,7 @@ const validarCampos = (e) => {
     swal("", "Debes completar todos los campos", "warning");
     return false
   }
-  //Aca ya sabemos que nombre, telefono y mail no son null
+  //aca ya sabemos que nombre, telefono y mail no son null
   const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   const emailValido = mail.match(regexp)
   if (!emailValido) {
@@ -64,5 +64,8 @@ btnEnviar.addEventListener("click", (e) => {
     imprimirClientes();
     swal("¡Muchas gracias!", "A la brevedad nos contactaremos", "success");
   } 
+  
 })
+
+
 
