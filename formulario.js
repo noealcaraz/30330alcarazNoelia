@@ -38,18 +38,26 @@ const imprimirClientes = () => {
   }
 }
 
-const clickEnviar = () => {
+const clickEnviar = (e) => {
   let nombre = document.querySelector(".nombre").value;
   let telefono = document.querySelector(".telefono").value;
   let mail = document.querySelector(".mail").value;
-  if (nombre === "" || telefono === "" || mail === "") {
+  if (!nombre || !telefono || !mail) {
     swal("", "Debes completar todos los campos", "warning");
-  } else {
-    swal("¡Muchas gracias!", "A la brevedad nos contactaremos", "success");
+    return
   }
+  //aca ya sabemos que nombre, telefono y mail no son null
+  const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const emailValido = mail.match(regexp)
+  if (!emailValido) {
+    swal("", "El email no es valido", "warning");
+    return
+  }
+    swal("¡Muchas gracias!", "A la brevedad nos contactaremos", "success");
 }
 
 btnEnviar.addEventListener("click", (e) => {
+  e.preventDefault()
     clickEnviar();
     guardarCliente();
     imprimirClientes();
