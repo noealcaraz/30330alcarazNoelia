@@ -1,4 +1,3 @@
-//DESAFIO COMPLEMENTARIO - Interactuar con el HTML + Incorporar Eventos
 
 class Formulario {
     constructor(nombre, telefono, mail){
@@ -10,6 +9,7 @@ class Formulario {
 
 let buttonEnviar = document.querySelector("#btnEnviar");
 
+//Guarda cliente
 const guardarCliente = () => {
     let nombre = document.querySelector(".nombre").value;
     let telefono = document.querySelector(".telefono").value;
@@ -38,6 +38,7 @@ const imprimirClientes = () => {
   }
 }
 
+//Validación de datos en formulario
 const validarCampos = (e) => {
   let nombre = document.querySelector(".nombre").value;
   let telefono = document.querySelector(".telefono").value;
@@ -46,7 +47,7 @@ const validarCampos = (e) => {
     swal("", "Debes completar todos los campos", "warning");
     return false
   }
-  //aca ya sabemos que nombre, telefono y mail no son null
+  //Aca ya sabemos que nombre, telefono y mail no son null
   const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   const emailValido = mail.match(regexp)
   if (!emailValido) {
